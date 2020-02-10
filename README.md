@@ -1,4 +1,4 @@
-# Pokemon Box Clearing Bot
+# Nintendo Switch A Spamming Bot
 
 Upon plugging the Arduino into the Switch through a USB Type B to USB Type C cable, the bot will spam the a button for the number of minutes specified
 
