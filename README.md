@@ -25,8 +25,8 @@ Upon plugging the Arduino into the Switch through a USB Type B to USB Type C cab
     followed by
 
     `brew install avr-gcc`
-- Download the LUFA library through this [link](http://www.fourwalledcubicle.com/LUFA.php) and put it in this directory
-- Make sure the `LUFA_PATH` inside the `makefile` points to the LUFA subdirectory that you just created inside this directory
+- Download the LUFA library through this [link](http://www.fourwalledcubicle.com/LUFA.php) at the bottom of the page, put it in this directory, and rename the folder to `LUFA`
+- Make sure the `LUFA_PATH` inside the `makefile` points to the LUFA subdirectory that you just created inside this directory (should be `./LUFA/LUFA`)
 - Ensure that the `makefile` setting for `MCU` is set to `MCU = atmega16u2` and compile by typing `make`
 
 ### Putting the Arduino in DFU Mode
@@ -48,6 +48,8 @@ Upon plugging the Arduino into the Switch through a USB Type B to USB Type C cab
     `sudo dfu-programmer atmega16u2 flash <.hex file>`
 
     `sudo dfu-programmer atmega16u2 reset`
+
+- You can also use the `flash.sh` shell script (either through the command `sh flash.sh` or `./flash.sh`) which makes the code and runs all 3 of the above `dfu-programmer` commands to flash the code onto the Arduino once it is in DFU mode
 
 - If you receive this error:
 
